@@ -373,9 +373,9 @@ function pickup() {
   people.filter(function (person, i) {
     return shuttle.distance(person.mark.position.lat(), person.mark.position.lng()) <= 15;
   }).foreach(function (person, i) {
-    var seatsTaken = shuttle.seats.count(function (e) { return e !== null; });
-    if (seatsTaken < shuttle.seats.length) {
-      shuttle.seats[seatsTaken] = person;
+    var nextSeat = shuttle.seats.indexOf(null);
+    if (nextSeat !== -1) {
+      shuttle.seats[nextSeat] = person;
       $('#announcements').html(person.person.name + ' has been picked up!');
 
       var features = earth.getFeatures();
