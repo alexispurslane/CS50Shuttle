@@ -374,6 +374,7 @@ function pickup() {
     return shuttle.distance(person.mark.position.lat(), person.mark.position.lng()) <= 15;
   }).foreach(function (person, i) {
     var nextSeat = shuttle.seats.indexOf(null);
+    console.log(nextSeat);
     if (nextSeat !== -1) {
       shuttle.seats[nextSeat] = person;
       $('#announcements').html(person.person.name + ' has been picked up!');
