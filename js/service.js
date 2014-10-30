@@ -345,7 +345,11 @@ function keystroke(event, state) {
 function load() {
   // embed 2D map in DOM
   var latlng = new google.maps.LatLng(LATITUDE, LONGITUDE);
-  map = new google.maps.Map($('#map')
+  var busSymbol = {
+    path: 'http://maps.gstatic.com/mapfiles/markers2/arrow.png',
+    rotation: 0
+  };
+  var map = new google.maps.Map($('#map')
                             .get(0), {
                               center: latlng,
                               disableDefaultUI: true,
@@ -357,7 +361,7 @@ function load() {
 
                             // prepare shuttle's icon for map
                             bus = new google.maps.Marker({
-                              icon: 'https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/bus.png',
+                              icon: busSymbol,
                               map: map,
                               title: 'you are here'
                             });
@@ -374,7 +378,6 @@ function pickup() {
     return shuttle.distance(person.mark.position.lat(), person.mark.position.lng()) <= 15;
   }).foreach(function (person, i) {
     var nextSeat = shuttle.seats.indexOf(null);
-    console.log(nextSeat);
     if (nextSeat !== -1) {
       shuttle.seats[nextSeat] = person;
       $('#announcements').html(person.person.name + ' has been picked up!');
