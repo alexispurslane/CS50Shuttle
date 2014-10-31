@@ -200,6 +200,7 @@ function dropoff() {
         $('#announcements').html('You have dropped off ' + seat.person.name + ' here.');
         var iInSeats = iss[i];
         shuttle.seats[iInSeats] = null;
+        points++;
       }, function () {
         $('#announcements').html('You have no passengers here that you can drop off here.');
       });
