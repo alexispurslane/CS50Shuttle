@@ -172,7 +172,8 @@ Shuttle.prototype.updateOrientation = function (dt) {
             this.tiltAngle = tiltMin;
         }
     }
-}
+    busSymbol.rotation = shuttle.position.heading;
+};
 
 /**
  * Method that updates a shuttle's position.
