@@ -73,10 +73,10 @@ body {
 }
 #top-right {
   position: absolute;
-  right: 1px;
+  right: 320px;
   top: 1px;
   z-index: 100;
-  opacity: 0.6;
+  background-opacity: 0.6;
   font-size: 16pt;
   background: blue;
 }
@@ -85,5 +85,5 @@ body {
   font-size: 16pt;
   position: absolute;
   z-index: 100;
-  opacity: 0.6;
+  background-opacity: 0.6;
 }
