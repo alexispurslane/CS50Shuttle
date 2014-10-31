@@ -350,7 +350,7 @@ function load() {
   // embed 2D map in DOM
   var latlng = new google.maps.LatLng(LATITUDE, LONGITUDE);
   busSymbol = {
-    path: FORWARD_CLOSED_ARROW,
+    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
     strokeColor: 'black',
     fillColor: 'green',
     rotation: 0
