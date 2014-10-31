@@ -261,11 +261,12 @@ function initCB(instance) {
     seats: SEATS,
     velocity: VELOCITY
   });
+  busSymbol.rotation = shuttle.position.heading;
 
   // synchronize camera with Earth
   google.earth.addEventListener(earth, 'frameend', frameend);
 
-  // synchronize map with Earth
+  // synchronize map with Earth;
   google.earth.addEventListener(earth.getView(), 'viewchange', viewchange);
 
   // update shuttle's camera
@@ -350,7 +351,7 @@ function load() {
   var latlng = new google.maps.LatLng(LATITUDE, LONGITUDE);
   busSymbol = {
     path: 'm178.206879,140.25914l25.716415,-12.600044l-49.72226,0l-49.721069,0l0,-7.800049l0,-7.799843l49.151474,0c27.03244,0 49.150482,-0.395363 49.150482,-0.878571c0,-0.483307 -10.76091,-6.153236 -23.914871,-12.60006l-23.915085,-11.721405l22.105392,0l22.104431,0l33.759079,16.515648l33.759583,16.515923l-33.824005,16.484108l-33.824341,16.484329l-23.271133,0l-23.270767,0l25.716675,-12.600037l0,0z',
-    rotation: shuttle.position.heading
+    rotation: 0
   };
   map = new google.maps.Map($('#map')
                             .get(0), {
