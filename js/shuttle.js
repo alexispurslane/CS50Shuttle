@@ -9,11 +9,9 @@
  */
 function updateSymbol(rot) {
   busSymbol.rotation = rot;
-  bus = new google.maps.Marker({
-    icon: busSymbol,
-    map: map,
-    title: 'you are here'
-  });
+  bus.setMap(null);
+  bus.icon = busSymbol;
+  bus.setMap(map);
   return true;
 }
 /**
