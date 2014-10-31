@@ -8,7 +8,7 @@
  * http://earth-api-samples.googlecode.com/svn/trunk/demos/firstpersoncam/firstpersoncam.js.
  */
 function updateSymbol(rot) {
-  busSymbol.rotation = rot;
+  busSymbol.rotation = V3.toDegrees(rot);
   bus.setIcon(busSymbol);
   return true;
 }
