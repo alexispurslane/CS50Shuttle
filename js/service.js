@@ -107,6 +107,9 @@ var VELOCITY = 50;
 // global reference to shuttle's marker on 2D map
 var bus = null;
 
+// global referance to shuttle's symbol
+var busSymbol = null;
+
 // global reference to 3D Earth
 var earth = null;
 
