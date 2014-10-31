@@ -6,6 +6,19 @@
  *
  * Implements a shuttle service.
  */
+var timeLeft = 60;
+var time = setInteval(tick);
+function tick () {
+  if (timeLeft <= 0) {
+    $('#top-right').text('<p class="text-danger">Time\'s up!</p>');
+    $(document.body).off('keydown');
+    $(document.body).off('keyup');
+    clearInterval(time);
+  } else {
+    timeLeft -= 1;
+    $('#time').text(timeLeft);
+  }
+}
 // Stuff
 Array.prototype.is = function (f, sec) {
   if (f(this)) {
