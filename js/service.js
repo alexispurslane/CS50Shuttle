@@ -339,7 +339,6 @@ function keystroke(event, state) {
     shuttle.states.movingForward = state;
     return false;
   }
-  busSymbol.rotation = shuttle.headingAngle;
   return true;
 }
 
