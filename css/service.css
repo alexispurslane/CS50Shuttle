@@ -72,6 +72,7 @@ body {
     width: 320px;
 }
 #top-right {
+  color: white;
   position: absolute;
   right: 320px;
   top: 1px;
@@ -81,6 +82,7 @@ body {
   background: blue;
 }
 #top-left {
+  color: white;
   background: blue;
   font-size: 16pt;
   position: absolute;
