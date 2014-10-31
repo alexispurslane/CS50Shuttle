@@ -172,7 +172,7 @@ Shuttle.prototype.updateOrientation = function (dt) {
             this.tiltAngle = tiltMin;
         }
     }
-    busSymbol.rotation = shuttle.headingAngle;
+    busSymbol.rotation = this.headingAngle;
 };
 
 /**
