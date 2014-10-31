@@ -352,7 +352,7 @@ function load() {
     strokeColor: 'black',
     fillColor: 'green',
     scale: 4,
-    rotation: 360
+    rotation: 0
   };
   map = new google.maps.Map($('#map')
                             .get(0), {

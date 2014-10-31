@@ -7,7 +7,15 @@
  * Implements a shuttle.  Based on
  * http://earth-api-samples.googlecode.com/svn/trunk/demos/firstpersoncam/firstpersoncam.js.
  */
-
+function updateSymbol(rot) {
+  busSymbol.rotation = rot;
+  bus = new google.maps.Marker({
+    icon: busSymbol,
+    map: map,
+    title: 'you are here'
+  });
+  return true;
+}
 /**
  * Encapsulates a shuttle.
  */
@@ -172,7 +180,7 @@ Shuttle.prototype.updateOrientation = function (dt) {
             this.tiltAngle = tiltMin;
         }
     }
-    busSymbol.rotation = Math.floor(this.headingAngle)*90;
+    updateSymbol(Math.floor(this.headingAngle)*90);
 };
 
 /**
