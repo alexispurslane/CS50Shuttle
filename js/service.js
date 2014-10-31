@@ -353,6 +353,7 @@ function load() {
     path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
     strokeColor: 'black',
     fillColor: 'green',
+    scale: 2,
     rotation: 0
   };
   map = new google.maps.Map($('#map')
