@@ -9,9 +9,7 @@
  */
 function updateSymbol(rot) {
   busSymbol.rotation = rot;
-  bus.setMap(null);
   bus.icon = busSymbol;
-  bus.setMap(map);
   return true;
 }
 /**
