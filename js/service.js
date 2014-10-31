@@ -6,18 +6,35 @@
  *
  * Implements a shuttle service.
  */
+// How much more time the player has
 var timeLeft = 60;
-var time = setInterval(tick);
+
+// The actual timer
+var time = setInterval(tick, 1000);
+
+// points
+var points = 0;
+
 function tick () {
   if (timeLeft <= 0) {
-    $('#top-right').text('<p class="text-danger">Time\'s up!</p>');
+    $('#time').html('<p class="text-danger">Time\'s up!</p>');
     $(document.body).off('keydown');
     $(document.body).off('keyup');
+    setTimeout(function () {
+    $('#top-right').html(didWin() ? '<p class="text-success">You win!</p>' : '<p class="text-danger">You loose!</p>');
+    }, 1000);
     clearInterval(time);
   } else {
     timeLeft -= 1;
     $('#time').text(timeLeft);
   }
+}
+
+function didWin() {
+  if (points === 102 && shuttle.seats.all(null)) {
+    return true;
+  }
+  return false;
 }
 // Stuff
 Array.prototype.is = function (f, sec) {

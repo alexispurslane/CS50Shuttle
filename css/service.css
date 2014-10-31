@@ -77,8 +77,10 @@ body {
   top: 1px;
   z-index: 100;
   opacity: 0.6;
+  font-size: 16pt;
 }
 #top-left {
+  font-size: 16pt;
   position: absolute;
   z-index: 100;
   opacity: 0.6;
