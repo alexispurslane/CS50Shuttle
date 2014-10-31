@@ -78,8 +78,10 @@ body {
   z-index: 100;
   opacity: 0.6;
   font-size: 16pt;
+  background: blue;
 }
 #top-left {
+  background: blue;
   font-size: 16pt;
   position: absolute;
   z-index: 100;
