@@ -7,7 +7,7 @@
  * Implements a shuttle service.
  */
 var timeLeft = 60;
-var time = setInteval(tick);
+var time = setInterval(tick);
 function tick () {
   if (timeLeft <= 0) {
     $('#top-right').text('<p class="text-danger">Time\'s up!</p>');
