@@ -14,7 +14,6 @@ Array.prototype.is = function (f, sec) {
     return sec;
   }
 };
-
 Array.prototype.count = function (f) {
   var count = 0;
   this.forEach(function (e) {
@@ -353,7 +352,7 @@ function load() {
     strokeColor: 'black',
     fillColor: 'green',
     scale: 4,
-    rotation: 0
+    rotation: 360
   };
   map = new google.maps.Map($('#map')
                             .get(0), {
