@@ -71,3 +71,12 @@ body {
     margin-right: -100%;
     width: 320px;
 }
+#top-right {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  z-index: 100;
+}
+#top-left {
+  z-index: 100;
+}
