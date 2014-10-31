@@ -7,11 +7,6 @@
  * Implements a shuttle.  Based on
  * http://earth-api-samples.googlecode.com/svn/trunk/demos/firstpersoncam/firstpersoncam.js.
  */
-function updateSymbol(rot) {
-  busSymbol.rotation = (rot) + (180/Math.PI);
-  bus.setIcon(busSymbol);
-  return true;
-}
 /**
  * Encapsulates a shuttle.
  */
@@ -176,7 +171,6 @@ Shuttle.prototype.updateOrientation = function (dt) {
             this.tiltAngle = tiltMin;
         }
     }
-    updateSymbol(Math.floor(this.headingAngle)*90);
 };
 
 /**

@@ -366,7 +366,7 @@ function load() {
 
                             // prepare shuttle's icon for map
                             bus = new google.maps.Marker({
-                              icon: busSymbol,
+                              icon: 'https://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/bus.png',
                               map: map,
                               title: 'you are here'
                             });
