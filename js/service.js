@@ -261,7 +261,7 @@ function initCB(instance) {
     seats: SEATS,
     velocity: VELOCITY
   });
-  busSymbol.rotation = shuttle.position.heading;
+  busSymbol.rotation = shuttle.headingAngle;
 
   // synchronize camera with Earth
   google.earth.addEventListener(earth, 'frameend', frameend);
@@ -339,7 +339,7 @@ function keystroke(event, state) {
     shuttle.states.movingForward = state;
     return false;
   }
-  busSymbol.rotation = shuttle.position.heading;
+  busSymbol.rotation = shuttle.headingAngle;
   return true;
 }
 
